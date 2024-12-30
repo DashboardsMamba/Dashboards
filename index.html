@@ -33,7 +33,36 @@
             <!-- Category tab contents will be dynamically added here -->
         </div>
 
-       
+        <!-- Add Link Modal -->
+        <div class="modal fade" id="addLinkModal" tabindex="-1" aria-labelledby="addLinkModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addLinkModalLabel">Add New Link</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addLinkForm">
+                            <div class="form-group">
+                                <label for="linkName">Link Name</label>
+                                <input type="text" class="form-control" id="linkName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="linkUrl">Link URL</label>
+                                <input type="url" class="form-control" id="linkUrl" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="linkCategory">Category</label>
+                                <input type="text" class="form-control" id="linkCategory" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Link</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="text-center mt-auto p-3" style="background-color: #343a40; color: #f1f1f1;">
