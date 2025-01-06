@@ -12,6 +12,9 @@
         body {
             background-color: #000; /* Fundo preto */
             color: #fff; /* Texto branco */
+            min-height: 100vh; /* Garante que o conteúdo ocupe 100% da tela */
+            display: flex;
+            flex-direction: column;
         }
 
         header {
@@ -59,9 +62,16 @@
             color: #fff;
         }
 
+        .container {
+            margin-top: 100px; /* Compensa a altura do cabeçalho fixo */
+            flex: 1; /* Garante que a área principal se expanda */
+        }
+
         footer {
             background-color: #111;
             color: #fff;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
@@ -69,19 +79,30 @@
 <body>
 <header>
     <div class="brand">
-        <img src="images/logo.jpg" alt="Logo"> 
+        <img src="images/logo.jpg" alt="Logo">
         <h1>Mamba Culture</h1>
     </div>
     <input type="text" id="search" class="form-control" placeholder="Search links...">
 </header>
 
-<div class="container mt-5" style="margin-top: 100px;">
+<div class="container">
     <!-- Conteúdo da página -->
     <ul class="nav nav-tabs" id="categoryTabs" role="tablist">
-        <!-- Abas dinâmicas -->
+        <!-- Certifique-se de adicionar conteúdo dinâmico aqui -->
+        <li class="nav-item">
+            <a class="nav-link active" id="tab1" data-toggle="tab" href="#content1" role="tab">Tab 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="tab2" data-toggle="tab" href="#content2" role="tab">Tab 2</a>
+        </li>
     </ul>
     <div class="tab-content" id="categoryTabContent">
-        <!-- Conteúdo das abas -->
+        <div class="tab-pane fade show active" id="content1" role="tabpanel">
+            Conteúdo da Aba 1
+        </div>
+        <div class="tab-pane fade" id="content2" role="tabpanel">
+            Conteúdo da Aba 2
+        </div>
     </div>
 
     <!-- Modal -->
@@ -116,12 +137,12 @@
     </div>
 </div>
 
-<footer class="text-center mt-auto p-3">
+<footer>
     <p>&copy; 2024 Site feito por Rafael Russo Soares</p>
 </footer>
 
 <script>
-    // Mesmos scripts do código original
+    // Scripts para popular abas dinâmicas ou outros
 </script>
 </body>
 
