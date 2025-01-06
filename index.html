@@ -13,16 +13,44 @@
         .link-item.hidden {
             display: none !important;
         }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .brand-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+        }
     </style>
 </head>
 
 <body style="display: flex; flex-direction: column; min-height: 100vh; background-color: #000; color: #fff;">
 <header class="d-flex justify-content-between align-items-center mb-4 p-3"
         style="background-color: #343a40; color: #f8f9fa; position: fixed; top: 0; width: 100%; z-index: 1000;">
-    <input type="text" id="search" class="form-control w-50" placeholder="Search links..."
-           style="background-color: #495057; color: #f8f9fa;">
+    <div class="header-content">
+        <div class="brand-logo">
+            <a href="/">
+                <img src="images/logo.jpg" alt="Logo">
+            </a>
+            <span>Mamba Culture</span>
+        </div>
+        <input type="text" id="search" class="form-control search-bar" placeholder="Search links..."
+               style="background-color: #495057; color: #f8f9fa;">
+    </div>
     <button class="btn btn-primary" data-toggle="modal" data-target="#addLinkModal">Adicionar Dashboard</button>
 </header>
+
 <div class="container mt-5" style="margin-top: 100px;"></div>
 
 <div class="container mt-5">
@@ -154,7 +182,6 @@
             $(this).toggle(hasVisibleLinks);
         });
 
-        // Ensure the first visible tab is shown
         const firstVisibleTab = $('#categoryTabs .nav-link:not(.hidden)').first();
         if (firstVisibleTab.length) {
             firstVisibleTab.tab('show');
@@ -186,7 +213,6 @@
             `);
         });
 
-        // Ensure the first tab is shown by default
         $('#categoryTabs a:first').tab('show');
         $('#categoryTabContent .tab-pane:first').addClass('show active');
     }
