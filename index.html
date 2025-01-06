@@ -18,7 +18,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #000; /* Alterado para preto */
+            background-color: #000; 
             color: #f8f9fa;
             padding: 10px 20px;
             position: fixed;
@@ -34,7 +34,7 @@
 
         .brand-container img {
             height: 50px;
-            margin-right: 15px;
+            margin-right: 24px;
         }
 
         .brand-container span {
@@ -50,13 +50,13 @@
 
         .search-bar-container input {
             max-width: 500px;
-            background-color: #495057;
+            background-color: #7f7878;
             color: #f8f9fa;
         }
 
-        /* Alterações para o rodapé e fundo da página */
+        
         footer {
-            background-color: #000; /* Rodapé preto */
+            background-color: #000; 
             color: #f1f1f1;
         }
 
@@ -64,18 +64,18 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-color: #d2d2d2; /* Fundo da página alterado */
+            background-color: #d2d2d2; 
             color: #000;
         }
 
-        /* Alteração para o botão Adicionar Dashboard */
+       
         .btn-primary {
-            background-color: #7f7878; /* Botão em cinza */
+            background-color: #7f7878; 
             border-color: #7f7878;
         }
 
         .btn-primary:hover {
-            background-color: #6b6565; /* Cor do botão ao passar o mouse */
+            background-color: #6b6565; 
             border-color: #6b6565;
         }
     </style>
@@ -90,7 +90,7 @@
         <span>Mamba Culture</span>
     </div>
     <div class="search-bar-container">
-        <input type="text" id="search" class="form-control" placeholder="Search links...">
+        <input type="text" id="search" class="form-control" placeholder="Nome do Dashboard">
     </div>
     <button class="btn btn-primary" data-toggle="modal" data-target="#addLinkModal">Adicionar Dashboard</button>
 </header>
@@ -110,7 +110,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addLinkModalLabel">Add New Link</h5>
+                    <h5 class="modal-title" id="addLinkModalLabel">Adicionar Novo Dashboard</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -118,15 +118,15 @@
                 <div class="modal-body">
                     <form id="addLinkForm">
                         <div class="form-group">
-                            <label for="linkName">Link Name</label>
+                            <label for="linkName">Nome</label>
                             <input type="text" class="form-control" id="linkName" required>
                         </div>
                         <div class="form-group">
-                            <label for="linkUrl">Link URL</label>
+                            <label for="linkUrl">URL</label>
                             <input type="url" class="form-control" id="linkUrl" required>
                         </div>
                         <div class="form-group">
-                            <label for="linkCategory">Category</label>
+                            <label for="linkCategory">Categoria</label>
                             <input type="text" class="form-control" id="linkCategory" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Add Link</button>
@@ -138,7 +138,7 @@
 </div>
 
 <footer class="text-center mt-auto p-3">
-    <p>&copy; 2024 Site feito por Rafael Russo Soares</p>
+    <p>&copy; 2024 Site feito por Rafael Russo Soares e Pedro Marques</p>
 </footer>
 </body>
 
